@@ -21,7 +21,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const DataCard = styled.div`
-  border: 1px solid blue;
+  border: 1px solid orange;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
@@ -30,6 +30,11 @@ export const DataCard = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  &:hover {
+    transition: 0.5s;
+    background-color: orange;
+    border: 1px solid black;
+  }
 `;
 
 export const InfoColumn = styled.div`
@@ -51,3 +56,24 @@ export const PaginationWrapper = styled(Stack)`
   width: 100%;
   max-width: 1000px;
 `;
+export const DeathStyle = styled.div`
+display: flex;
+justify-content: center;
+  color: blue;
+  border: 1px double blue;
+  border-radius: 8px;
+`
+export const PopulationStyle = styled.div`
+display: flex;
+justify-content: center;
+  color: green;
+  border: 1px double green;
+  border-radius: 8px;
+`
+export const TotalDeaths = styled.div`
+display: flex;
+justify-content: center;
+  color: red;
+  border: 1px double red;
+  border-radius: 8px;
+`

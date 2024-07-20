@@ -27,7 +27,7 @@ const LinksContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 20px; /* Adjust padding as needed */
+  padding-right: 20px;
 `;
 
 const LinkItem = styled.a`
@@ -35,7 +35,8 @@ const LinkItem = styled.a`
   text-decoration: none;
   color: black;
   font-size: 24px;
-  
+  font-family: "Open Sans";
+
   &:hover {
   color: red;
   transition: 0.5s;
@@ -51,8 +52,8 @@ export const NavbarStyle = () => {
         <img src={covidlogo} alt="Logo" />
       </LogoLink>
       <LinksContainer>
-        <LinkItem href="/CovidStats">Covid</LinkItem>
-        <LinkItem href="/Country">Country</LinkItem>
+        <LinkItem href="/CovidStats">Covid Stats</LinkItem>
+        <LinkItem href="/Country">Country Stats</LinkItem>
         <LinkItem href="/About Us">About Us</LinkItem>
       </LinksContainer>
     </NavbarContainer>

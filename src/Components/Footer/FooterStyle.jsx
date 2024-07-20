@@ -26,7 +26,7 @@ const LinksContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 20px; /* Adjust padding as needed */
+  padding-right: 20px;
 `;
 
 const LinkItem = styled.a`
@@ -53,8 +53,8 @@ export const FooterStyle = () => {
     </IconWrapper>
     <LinksContainer>
         <LinkItem href="/CovidStats">Covid</LinkItem>
-        <LinkItem href="/about">Country</LinkItem>
-        <LinkItem href="/contact">About Us</LinkItem>
+        <LinkItem href="/Country">Country</LinkItem>
+        <LinkItem href="/About Us">About Us</LinkItem>
       </LinksContainer>
       <p style={{ textAlign: "center" }}>© Covid 19 Coorporation</p>
     </>

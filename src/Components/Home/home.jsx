@@ -7,7 +7,6 @@ import corona from './Images/CoronaMap.png';
 export default function Home() {
   const { data, loading, error } = useContext(MyDataContext);
 
-  // Extract statistics from the response
   const statistics = data?.response[0];
 
   if (loading) {
@@ -18,7 +17,7 @@ export default function Home() {
     return <p>Error: {error.message}</p>;
   }
 
-  // Check if statistics are available
+
   if (!statistics) {
     return <p>No data available</p>;
   }
@@ -26,7 +25,7 @@ export default function Home() {
   return (
     <Container>
       <Image src={corona} alt="Corona" />
-      <h1>World Stats</h1>
+      <h1 style={{color:"#880808"}}>World Stats</h1>
       <StatsWrapper>
         <StatsCard>
           <CardTitle>Recovered</CardTitle>
@@ -42,7 +41,7 @@ export default function Home() {
         </StatsCard>
         <LinkCard>
           <LinkTitle>
-            <Link to="/country-status">Country Status</Link>
+            <Link to="/Country">Country Status</Link>
           </LinkTitle>
         </LinkCard>
       </StatsWrapper>

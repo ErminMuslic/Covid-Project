@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
-import MyDataProvider from "./Components/Provider/provider"; // Provider for specific country data
-import AllCountriesDataProvider from "./Components/Provider/providerCountries"; // Provider for all countries data
+import MyDataProvider from "./Components/Provider/provider";
+import AllCountriesDataProvider from "./Components/Provider/providerCountries"; 
 import { createGlobalStyle } from "styled-components";
 import Covid from "./Components/CovidStats/covid";
 import Footer from "./Components/Footer/Footer";

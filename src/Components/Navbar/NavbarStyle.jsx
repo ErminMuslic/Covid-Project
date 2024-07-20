@@ -52,8 +52,8 @@ export const NavbarStyle = () => {
       </LogoLink>
       <LinksContainer>
         <LinkItem href="/CovidStats">Covid</LinkItem>
-        <LinkItem href="/about">Country</LinkItem>
-        <LinkItem href="/contact">About Us</LinkItem>
+        <LinkItem href="/Country">Country</LinkItem>
+        <LinkItem href="/About Us">About Us</LinkItem>
       </LinksContainer>
     </NavbarContainer>
   );

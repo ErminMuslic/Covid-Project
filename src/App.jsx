@@ -9,6 +9,7 @@ import Covid from "./Components/CovidStats/covid";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About Us/About";
 import Country from "./Components/CountryStats/Country";
+import AllCountriesDataProviderDay from "./Components/Provider/providerCountriesDate";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -24,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <Router>
+      <AllCountriesDataProviderDay>
       <AllCountriesDataProvider>
         <MyDataProvider>
           <GlobalStyle />
@@ -37,6 +39,7 @@ function App() {
           <Footer />
         </MyDataProvider>
       </AllCountriesDataProvider>
+      </AllCountriesDataProviderDay>
     </Router>
   );
 }

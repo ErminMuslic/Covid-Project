@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { AllCountriesDataContext } from '../Provider/providerCountries'; // Correct import for context
-import { Container, ContentWrapper, DataCard, InfoColumn, StatsColumn, PaginationWrapper } from './covidstyle'; // Import styled components
+import { AllCountriesDataContext } from '../Provider/providerCountries';
+import { Container, ContentWrapper, DataCard, InfoColumn, StatsColumn, PaginationWrapper,PopulationStyle,DeathStyle,TotalDeaths } from './covidstyle'; 
 import Pagination from '@mui/material/Pagination';
 
 const Covid = () => {
-  const { data, loading, error } = useContext(AllCountriesDataContext); // Use context
+  const { data, loading, error } = useContext(AllCountriesDataContext); 
   const [page, setPage] = useState(1);
-  const itemsPerPage = 6; // Number of items per page
+  const itemsPerPage = 6; 
 
   const handleChange = (event, value) => {
     setPage(value);
@@ -24,7 +24,6 @@ const Covid = () => {
     return <p>No data available</p>;
   }
 
-  // Paginate the data
   const paginatedData = data.response.slice((page - 1) * itemsPerPage, page * itemsPerPage);
   const totalPages = Math.ceil(data.response.length / itemsPerPage);
 
@@ -38,9 +37,9 @@ const Covid = () => {
               <p><strong>Continent:</strong> {stat.continent}</p>
             </InfoColumn>
             <StatsColumn>
-              <p><strong>Population:</strong> {stat.population}</p>
-              <p><strong>New Deaths:</strong> {stat.deaths.new || "N/A"}</p>
-              <p><strong>Total Deaths:</strong> {stat.deaths.total}</p>
+              <p><strong>Population:</strong> <PopulationStyle>{stat.population || "0"}</PopulationStyle></p>
+              <p><strong>New Deaths:</strong> <DeathStyle>{stat.deaths.new || "0"}</DeathStyle></p>
+              <p><strong>Total Deaths:</strong> <TotalDeaths>{stat.deaths.total || "0"}</TotalDeaths></p>
             </StatsColumn>
           </DataCard>
         ))}

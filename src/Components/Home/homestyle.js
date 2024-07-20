@@ -21,8 +21,8 @@ export const StatsCard = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  justify-content: center;
+  align-items: center; 
   &:hover {
     transition: 0.5s;
     transform: scale(1.2);
@@ -31,13 +31,13 @@ export const StatsCard = styled.div`
 
 export const CardTitle = styled.p`
   font-size: 18px;
-  font-weight: bold; /* Make the title bold */
+  font-weight: bold; 
 `;
 
 export const CardValue = styled.p`
   font-size: 25px;
   color: ${({ color }) => color || 'black'};
-  font-weight: bold; /* Make the value bold */
+  font-weight: bold;
 `;
 
 export const LinkCard = styled.div`

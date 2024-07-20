@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-height: calc(100vh - 100px); /* Adjust height based on footer size */
+  min-height: calc(100vh - 100px); 
   width: 100vw;
   background-image: url(${props => props.backgroundImage});
   background-size: cover;
@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const InputWrapper = styled.div`
-  height: 20vh; /* Reduced height for better fit */
+  height: 20vh; 
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const MainContent = styled.div`
-  flex: 1; /* Allow to take remaining space */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,8 +32,8 @@ export const MainContent = styled.div`
 export const Section = styled.div`
   max-width: 80vw;
   width: 100%;
-  height: auto; /* Allow height to adjust based on content */
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  height: auto; 
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -45,13 +45,13 @@ export const Section = styled.div`
 export const BoxContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; /* Space between boxes */
+  gap: 15px; 
   width: 100%;
   justify-content: space-between;
 `;
 
 export const BlackBox = styled.div`
-  flex: 1; /* Make the box flexible */
+  flex: 1;
   min-width: 150px;
   background-color: white;
   border-radius: 10px;

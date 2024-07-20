@@ -4,7 +4,7 @@ import { TextField, Autocomplete } from '@mui/material';
 import fetchData from '../request/request'; 
 
 const CountryPage = () => {
-  const [country, setCountry] = useState('');
+  const [country, setCountry] = useState('Serbia');
   const [date, setDate] = useState('');
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -94,20 +94,20 @@ const CountryPage = () => {
               </div>
               <BoxContainer>
                 <BlackBox>
-                  <h4 style={{ fontSize: '20px', color: '#6D28D9' }}>{data?.cases?.new || 'no-data'}</h4>
+                  <h4 style={{ fontSize: '20px', color: '#6D28D9' }}>{data?.cases?.new || '0'}</h4>
                   <p>New Cases</p>
                 </BlackBox>
                 <BlackBox>
-                  <h4 style={{ fontSize: '20px', color: '#EF4444' }}>{data?.deaths?.new || 'no-data'}</h4>
+                  <h4 style={{ fontSize: '20px', color: '#EF4444' }}>{data?.deaths?.new || '0'}</h4>
                   <p>New Deaths</p>
                 </BlackBox>
                 <BlackBox>
-                  <h4 style={{ fontSize: '20px', color: '#10B981' }}>{data?.cases?.recovered || 'no-data'}</h4>
+                  <h4 style={{ fontSize: '20px', color: '#10B981' }}>{data?.cases?.recovered || '0'}</h4>
                   <p>New Recovered</p>
                 </BlackBox>
               </BoxContainer>
               <WideBlackBox style={{ marginTop: '20px' }}>
-                <h4 style={{ fontSize: '20px', color: '#9CA3AF' }}>{data?.cases?.active || 'no-data'}</h4>
+                <h4 style={{ fontSize: '20px', color: '#9CA3AF' }}>{data?.cases?.active || '0'}</h4>
                 <p>Total Active</p>
               </WideBlackBox>
             </div>
